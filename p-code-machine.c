@@ -155,21 +155,21 @@ void instrucao(){
 }
 
 int main(){
-    char operacao[3];
-    int nivel,argumento,codigo;
+    char f[3];
+    int l,a,codigo;
     int j;
     int contador = 0;
 
     for(j = 0; j < 100; j++){  
-        scanf("\n%s %d %d", operacao, &nivel, &argumento);
-        if(strcmp(operacao,"OPR") == 0 && argumento == 0){
+        scanf("\n%s %d %d", f, &l, &a);
+        if(strcmp(f,"OPR") == 0 && a == 0){
             break;
         }else{
-                codigo = codInstrucao(operacao);
+                codigo = codInstrucao(f);
                 if(codigo != -1){
                     code[j].f = codigo;
-                    code[j].l = nivel;
-                    code[j].a = argumento;
+                    code[j].l = l;
+                    code[j].a = a;
                     contador = contador + 1;
                 }else{
                     printf("Instrucao invalida!!");
